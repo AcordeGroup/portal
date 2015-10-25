@@ -11,11 +11,11 @@ Fecha: 25/10/2015
 <br/>-- Programación Web Modular
 <br/>-- Servicios Web con <strong>node.js</strong>
 <br/>-- Enfásis en simplificar mantenimiento del sitio WEB con herramientas modernas de Desarrollo:
-	<br/>&nbsp&nbsp-- Programación JS, HTML y CSS Modular con <strong>Browserify</strong> (Permite lograr el paradigma SPA)
-	<br/>&nbsp&nbsp-- Usar Extensiones de Programación CSS para mejorar el mantenimiento <strong>LESS</strong>.
+	<br/>---- Programación JS, HTML y CSS Modular con <strong>Browserify</strong> (Permite lograr el paradigma SPA)
+	<br/>---- Usar Extensiones de Programación CSS para mejorar el mantenimiento <strong>LESS</strong>.
 <br/>-- Uso de Editores y Extensiones de edición WEB Modernas:
-	<br/>&nbsp&nbsp-- Brackets.
-	<br/>&nbsp&nbsp-- EMMET.
+	<br/>---- Brackets.
+	<br/>---- EMMET.
 	
 #Directivas de Diseño
 <br/>-- 100% Responsive
