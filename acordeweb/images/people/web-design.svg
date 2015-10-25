@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="web-design.svg">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1680"
+     inkscape:window-height="988"
+     id="namedview8"
+     showgrid="false"
+     inkscape:zoom="0.65186406"
+     inkscape:cx="-278.09593"
+     inkscape:cy="121.131"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     inkscape:snap-text-baseline="true" />
+  <g
+     id="icono"
+     transform="matrix(1.0913632,0,0,1.0913632,-18.576066,-29.964275)"
+     style="fill:#333333">
+    <path
+	   class="mosaic-area-icono-web"
+       d="m 225.68,260.67 c 2.5,-5.36 2.95,-13.5 -1.65,-18.12 l -3.53,-3.53 c -4.6,-4.6 -12.14,-4.22 -18.12,-1.65 -1.76,0.84 -3.4,1.96 -4.86,3.42 -6.84,6.82 -20.27,31.34 -13.44,38.17 6.83,6.83 31.35,-6.6 38.18,-13.44 1.46,-1.45 2.42,-3.03 3.42,-4.86 z m 261.49,168.83 -33.6,-60.62 c -1.06,-1.94 -2.07,-3.85 -5.07,-5.3 l 0,-221.58 c 0,-16.5 -13,-29.5 -29.5,-29.5 l -29.78,0 c -0.9,1 -1.8,2.75 -2.8,4.17 -2.4,3.5 -5,6.83 -7.8,10.83 l 40.38,0 c 8.27,0 14.5,6.23 14.5,14.5 l 0,218.5 -359,0 0,-218.5 c 0,-8.27 7.23,-14.5 15.5,-14.5 l 197.52,0 c 5.16,-6 10.42,-11 15.68,-15 l -213.2,0 c -16.5,0 -30.5,13 -30.5,29.5 l 0,221.53 c -2,1.45 -3.57,3.24 -4.66,5.18 L 20.8,429.55 c -2.7,4.8 -0.3,8.96 5.2,8.96 l 456,0 c 5.5,0 7.83,-4.2 5.17,-9 z m -141.67,-26 0,1.5 c 0,6.63 -4.87,12.5 -11.5,12.5 l -160,0 c -6.63,0 -12.5,-5.87 -12.5,-12.5 l 0,-1.5 -108.53,0 15.08,-26.73 c 0.44,-0.48 1.53,-1.27 2.17,-1.27 l 368.55,0 c 0.6,0 1.62,0.75 2.03,1.2 l 14.78,26.8 -110.08,0 z m -21,-237.62 c 42.07,-42.08 69.25,-83.12 62.48,-89.9 -6.77,-6.76 -47.73,20.5 -89.8,62.58 -5.12,5.1 -9.83,10.37 -14.66,15.2 l -55.25,63.74 c -4.7,4.7 -5.75,11.23 -1.07,15.9 l 2.83,2.84 c 4.7,4.7 11.23,3.63 15.9,-1.06 l 64.46,-54.55 c 4.82,-4.82 10,-9.64 15.1,-14.75 z"
+       id="path6"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     id="hover">
+    <rect
+       id="rectHover"
+       width="515.06812"
+       height="271.18643"
+       x="0.33898354"
+       y="515"
+       class="mosaic-rect-area-out" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:142.75px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#800080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="238.0239"
+       y="512"
+       id="textHover"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0785703,0.92715329)"
+       class="mosaic-text-area"><tspan
+         sodipodi:role="line"
+         x="238.0239"
+         y="452.5437"
+         id="tspan4162"><tspan
+           x="238.0239"
+           y="452.5437"
+           id="tspan4164">Web</tspan></tspan></text>
+  </g>
+</svg>

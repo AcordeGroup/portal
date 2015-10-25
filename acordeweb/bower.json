@@ -1,0 +1,21 @@
+{
+  "name": "isvenezuela",
+  "version": "0.0.1",
+  "authors": [
+    "carlos moh <carlosmoh@gmail.com>"
+  ],
+  "description": "Portal Corporativo de ISVenezuela",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "desarrollo",
+    "web",
+    "portal",
+    "isvenezuela"
+  ],
+  "license": "MIT",
+  "homepage": "isven.com.ve",
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
