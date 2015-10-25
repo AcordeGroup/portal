@@ -1,3 +1,7 @@
+@ACORDE-FONT: 'Work Sans', 'Arial';
+@ACORDE-HOME-BACK: #1E1F1F url("/images/home_hero_bg.jpg") no-repeat left top;
+
+
 html {
   position: relative;
   min-height: 100%;
@@ -5,8 +9,9 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  font-family: 'Work Sans', sans-serif; 
+  font-family: @ACORDE-FONT; 
 }
+
 /* header styles
 -------------------------------------------------- */
 
@@ -30,7 +35,7 @@ body {
 }}
 
 .navbar-brand {
-   font-family: 'Work Sans', sans-serif; 
+   font-family: @ACORDE-FONT; 
    font-weight: 700;
    letter-spacing: 2px;
    text-decoration: none
@@ -97,15 +102,15 @@ body {
 }
 
 .menu-item {
-    font: 600 30px 'Work Sans', serif !important;
-}}
+    font: 600 30px @ACORDE-FONT !important;
+}
 
 .navbar-default .navbar-nav>li>a {
     transition: all ease-in-out 0.3s;
 }
 
 .navbar-default .navbar-nav>li {
-    font: 600 14px 'Work Sans', serif;
+    font: 600 14px @ACORDE-FONT;
     letter-spacing: 2px;
     text-decoration: none;
     text-transform: uppercase;
@@ -172,7 +177,28 @@ body {
     top: 11px;
 }}
 
-/* container styles
+/* home styles
+-------------------------------------------------- */
+.home-contents {
+    padding-top: 60px;
+    width: 100%;
+    height: 100%;
+    background: @ACORDE-HOME-BACK;
+    background-size: 100% 100%;
+}
+
+
+/* enterprise styles
+-------------------------------------------------- */
+.enterprise-contents {
+    padding-top: 60px;
+    width: 100%;
+    height: 100%;
+    background-color: chartreuse;
+    background-size: 100% 100%;    
+}
+
+/* people styles
 -------------------------------------------------- */
 .container-header {
     width: auto;
@@ -182,15 +208,17 @@ body {
     width: 100%;
 }
 
+#people {
+    padding-top: 60px;
+}
+
 #acorde-mosaic {
     height: 768px;
-    margin-top: 60px;
-    margin-bottom: 68px;
 }
 
 @media (max-width: 500px) {
-#acorde-mosaic {    
-    margin-top: 40px;
+#people {
+    padding-top: 40px;
 }}
 
 
@@ -204,9 +232,6 @@ body {
 .mosaic-rect-people {
     fill: gray;
     fill-opacity: 0.1;
-    stroke: darkgray;
-    stroke-width: 1;
-    stroke-opacity: 0.9;
 }
 
 .mosaic-text-people {
@@ -224,6 +249,139 @@ body {
 .mosaic-image-people-active {
     opacity: 0.5;
 }
+
+.mosaic-rect-area {
+    fill: white;
+    fill-opacity: 0.1;
+}
+
+.mosaic-rect-area-active {
+    fill: white;
+    fill-opacity: 0.3;
+}
+
+.mosaic-rect-area-hover {
+    opacity: 0.9;
+    -webkit-transition: all .6s ease;  /* Transition for Webkit browsers */   
+}
+
+.mosaic-rect-area-out {
+    opacity: 0.9;
+}
+
+.mosaic-text-area {
+    fill: white;
+    opacity: 0;
+}
+
+.mosaic-text-area-active {
+    fill: white !important;
+    opacity: 1;
+     -webkit-transition: all .6s ease;     
+}
+
+.mosaic-image-area {
+    opacity: 1;
+}
+
+.mosaic-area-group-active {
+     -webkit-transition: all .6s ease; 
+}
+
+.mosaic-area-icono-leadership.active {
+    -webkit-transition: all .6s ease;
+    fill: #D9EDF7;
+}
+
+.mosaic-area-icono-leadership {
+    fill: #337AB7;
+}
+
+.mosaic-area-icono-java-humo {
+    fill: #e76f00;
+}
+.mosaic-area-icono-java-humo.active {
+    -webkit-transition: all .6s ease;
+    fill: #cccccc;
+}
+
+.mosaic-area-icono-java-taza {
+    fill:#5382a1;
+}
+.mosaic-area-icono-java-taza.active {
+    -webkit-transition: all .6s ease;
+    fill:#ffffff;
+}
+
+.mosaic-area-icono-c {
+    fill:#03A9F4;
+}
+.mosaic-area-icono-c.active {
+    -webkit-transition: all .6s ease;
+    fill:#FFEB3B;
+}
+
+.mosaic-area-icono-apple {
+    fill:#000000;
+}
+.mosaic-area-icono-apple.active {
+    -webkit-transition: all .6s ease;
+    fill:#ffffff;
+    opacity: 1;
+}
+
+.mosaic-area-icono-web {
+    fill:#FF5722;
+}
+.mosaic-area-icono-web.active {
+    -webkit-transition: all .6s ease;
+    fill:#FFC107;
+}
+
+
+/*contact styles
+-------------------------------------------------- */
+
+.contact-contents {
+    padding-top: 60px;
+    background-color: #FBFBFB;
+}
+
+.form-horizontal .form-group {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.visual#bg-contact-us {
+    filter: gray;
+    -webkit-filter: grayscale(50%);
+    background: url("/images/contact-us-bg.gif") repeat 0 20px #26225d;    
+    margin-bottom: 20px;
+}
+
+.visual {
+    text-align: center;
+    min-height: 150px;
+    padding: 10px 0 20px 0;
+    position: relative;
+    z-index: 1;
+    background: #26225d;
+    -webkit-box-shadow: inset 0 -11px 15px -11px rgba(0, 0, 0, 0.5), inset 0 11px 15px -11px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 -11px 15px -11px rgba(0, 0, 0, 0.5), inset 0 11px 15px -11px rgba(0, 0, 0, 0.5);
+}
+
+.col-md-12 {
+    color: white;
+    position: relative;
+    min-height: 1px;
+    padding-left: 26px;
+    padding-right: 26px;
+}
+
+@media (min-width: 1025px) {
+.col-md-12 {
+    width: 100%;
+}}
 
 
 /*footer styles
