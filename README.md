@@ -3,7 +3,7 @@ Portal Web de Acorde
 Por: Carlos Moh e Iván Silva
 Fecha: 25/10/2015
 
-#Directivas de Desarrollo
+#Estándares de Desarrollo
 <br/>-- Paradigma Single Page Application <strong>SPA</strong> https://en.wikipedia.org/wiki/Single-page_application
 <br/>-- 100% Responsive
 <br/>-- Uso de FONTS en vez de ICONOS. Librería <strong>FONTAWESOME</strong>.
@@ -17,11 +17,11 @@ Fecha: 25/10/2015
 	<br/>---- Brackets.
 	<br/>---- EMMET.
 	
-#Directivas de Diseño
+#Estándares de Diseño
 <br/>-- 100% Responsive
 <br/>-- Uso de tendencias de diseño web 2015. https://www.youtube.com/watch?v=IjR64gtOHEY
 	
-#Justificación de las directivas
+#Justificación de los Estandares
 <br/>-- Acorde GROUP ofrece DESARROLLO WEB del siglo 21. Se respetan las ultimas tendencias en el desarrollo y diseño.
 <br/>-- Acorde GROUP se asegura de usar tendencias con tecnología madura, que agreguen valor y que sea usada por las mejoras casas de desarrollo y diseño web del mundo.
 <br/>-- Acorde GROUP muestra en su SITIO WEB el conocimiento que posee y el nivel con el que cuentan sus recursos.
