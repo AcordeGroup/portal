@@ -1,5 +1,6 @@
 @ACORDE-FONT: 'Work Sans', 'Arial';
-@ACORDE-HOME-BACK: #1E1F1F url("/images/home_hero_bg.jpg") no-repeat left top;
+@ACORDE-HOME-BACK: #1E1F1F url("../images/home_hero_bg.jpg") no-repeat left top;
+@ACORDE-CONTACT-BACK: url("../images/contact-us-bg.gif") repeat 0 20px #26225d;
 
 
 html {
@@ -355,7 +356,7 @@ body {
 .visual#bg-contact-us {
     filter: gray;
     -webkit-filter: grayscale(50%);
-    background: url("/images/contact-us-bg.gif") repeat 0 20px #26225d;    
+    background: @ACORDE-CONTACT-BACK;    
     margin-bottom: 20px;
 }
 
