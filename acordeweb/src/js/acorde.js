@@ -1,4 +1,9 @@
 
+/** Función que hace scroll hacia un elemento con un id en particular */
+function goToByScroll(id){
+    $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+}
+
  /** Funcion que permite rotar un elemento */
  var rotate = function(elem,value, origin) {
       elem.css('transform',value);
@@ -397,7 +402,7 @@ $(document).ready(function(){
     console.info('acorde.js ready init');
     
     //suma funcionalidad del menu
-    $('#toggle').on('click', function () {     
+    $('#toggle').on('click', function (event) {     
          event.stopPropagation();
          if ($('.text-menu').css('opacity') == '0') { //Menu desplegado
             $('.text-menu').css('opacity','1');
@@ -415,7 +420,26 @@ $(document).ready(function(){
             $('.mobile-menu').addClass("show");
         }
 
-    });    
+    });
+    
+    //suma funcionalidad de navegacion
+    $('#home-next').on('click', function() {
+        goToByScroll("enterprise");
+    });
+    $('#enterprise-next').on('click', function() {
+        goToByScroll("people");
+    });
+    $('#people-next').on('click', function() {
+        goToByScroll("contact");
+    });
+    
+    //
+    $('a.menu-item').each( function (i, elem) {
+        $( this ).on('click', function () {
+            $("#toggle").click();
+        });
+    });
+    
     //inicializa los patrones de posicionamiento de los especial elements
     patron12 = [[1,3,0], [2,2,0], [1,2,3], [2,2,3], [2,2,1]];
     patron9 = [[1,3,0], [2,2,0], [1,2,3], [2,2,3]];

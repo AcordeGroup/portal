@@ -1,5 +1,6 @@
 @ACORDE-FONT: 'Work Sans', 'Arial';
 @ACORDE-HOME-BACK: #1E1F1F url("../images/home_hero_bg.jpg") no-repeat left top;
+@ACORDE-HOME-ARROW: transparent url("../images/hero_arrow_down.png") 0 0 no-repeat;
 @ACORDE-CONTACT-BACK: url("../images/contact-us-bg.gif") repeat 0 20px #26225d;
 
 
@@ -181,6 +182,7 @@ body {
 /* home styles
 -------------------------------------------------- */
 .home-contents {
+    position: relative;
     padding-top: 60px;
     width: 100%;
     height: 100%;
@@ -188,10 +190,43 @@ body {
     background-size: 100% 100%;
 }
 
+.down-arrow-button {
+    height: 17px;
+    width: 22px;
+    background: @ACORDE-HOME-ARROW;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 99;
+    top: 8px;
+    position: absolute;
+}
+
+.down-arrow-button-container {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 42px;
+    height: 38px;
+    padding: 7px 3px;
+    bottom: 10px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 200;
+}
+
+.down-arrow-button-container:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
 
 /* enterprise styles
 -------------------------------------------------- */
 .enterprise-contents {
+    position: relative;
     padding-top: 60px;
     width: 100%;
     height: 100%;
@@ -201,6 +236,15 @@ body {
 
 /* people styles
 -------------------------------------------------- */
+
+.people-contents {
+    position: relative;
+}
+
+#people-next {
+    bottom: 45px;
+}
+
 .container-header {
     width: auto;
 }
