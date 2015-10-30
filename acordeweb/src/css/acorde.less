@@ -1,6 +1,5 @@
 @ACORDE-FONT: 'Work Sans', 'Arial';
 @ACORDE-HOME-BACK: #1E1F1F url("../images/home_hero_bg.jpg") no-repeat left top;
-@ACORDE-HOME-ARROW: transparent url("../images/hero_arrow_down.png") 0 0 no-repeat;
 @ACORDE-CONTACT-BACK: url("../images/contact-us-bg.gif") repeat 0 20px #26225d;
 
 
@@ -190,19 +189,6 @@ body {
     background-size: 100% 100%;
 }
 
-.down-arrow-button {
-    height: 17px;
-    width: 22px;
-    background: @ACORDE-HOME-ARROW;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    z-index: 99;
-    top: 8px;
-    position: absolute;
-}
-
 .down-arrow-button-container {
     background: rgba(0, 0, 0, 0.4);
     position: absolute;
@@ -218,8 +204,78 @@ body {
     z-index: 200;
 }
 
+.fa.fa-chevron-down {
+    font-size: x-large;
+    color: white;
+}
 .down-arrow-button-container:hover {
     background: rgba(0, 0, 0, 0.7);
+}
+
+.down-arrow-button-container:hover > .fa.fa-chevron-down {
+    animation-name:demo;
+    animation-duration:0.7s;
+    animation-iteration-count:10;
+    -webkit-animation-name:demo; /* Prefix for Safari and Chrome */
+    -webkit-animation-duration:0.7s;    
+    -webkit-animation-iteration-count:10;
+}
+
+@keyframes demo
+{
+ 0% {transform:translateY(0px); animation-timing-function:ease-out;} 
+ 50% {transform:translateY(4px); animation-timing-function:ease-out;}
+ 100% {transform:translateY(0px); animation-timing-function:ease-out;}
+}
+
+.carousel, .carousel-inner, .carousel-inner > .item, .carousel-inner > .item > img {
+    height: 100%;
+    width: 100%;    
+}
+
+.carousel-indicators {
+    height: 30px;
+    width: 100%;    
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    left: 0%;
+    z-index: 5;
+    margin: 0;
+    list-style: none;
+}
+
+.carousel-control {
+    margin-right: 20px;
+    position: absolute;
+    top: 40%;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: center;
+    background: #222222;
+    border: 3px solid #ffffff;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 45px !important;
+    padding: 15px;
+    background: #333333;
+    background: rgba(0, 0, 0, 0.75);
 }
 
 

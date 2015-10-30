@@ -20,9 +20,10 @@ function goToByScroll(id){
      $("#enterprise").css('height', window.innerHeight);
      $("#contact").css('height', window.innerHeight - $(".footer").outerHeight(true));
      //
-     $("#home").css('padding-top', $("#navbar").outerHeight(true));
-     $("#enterprise").css('padding-top', $("#navbar").outerHeight(true));     
-     $("#contact").css('padding-top', $("#navbar").outerHeight(true));
+     navbarHeight = $(".navbar-default.navbar-fixed-top").innerHeight();
+     $("#home").css('padding-top', navbarHeight);
+     $("#enterprise").css('padding-top', navbarHeight);     
+     $("#contact").css('padding-top', navbarHeight);
      console.info('resizeAcordeMosaic');
      paintSvgOut();
  }
