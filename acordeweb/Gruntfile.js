@@ -20,6 +20,18 @@ module.exports = function(grunt) {
                 }
             }
         },
+        less: {
+            development: {
+                options: {
+                    compress: true,
+                    yuicompress: true,
+                    optimization: 2
+                },
+                files: {
+                    "src/css/acorde.css": "src/css/acorde.less" // destination file and source file
+                }
+            }
+        },
         copy: {
             main: {
                 files: 
@@ -37,7 +49,7 @@ module.exports = function(grunt) {
             css: {
                 files: 
                 [
-                    {'build/css/acorde.less': ['src/css/acorde.less']},
+                    {'build/css/acorde.css': ['src/css/acorde.css']},
                     {'build/css/bootstrap.css': ['src/css/bootstrap.css']},
                     {'build/css/bootstrap-theme.css': ['src/css/bootstrap-theme.css']},                    
                 ]
@@ -61,9 +73,10 @@ module.exports = function(grunt) {
 
     //CARGA LOS PLUGINS
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-clean');    
     //SE REGISTRA LAS TAREAS
-    grunt.registerTask('default', ['clean','copy','uglify']);
+    grunt.registerTask('default', ['clean','less','copy','uglify']);
 
 };
