@@ -1,7 +1,5 @@
 @ACORDE-FONT: 'Work Sans', 'Arial';
 @ACORDE-HOME-BACK: #1E1F1F url("../images/home_hero_bg.jpg") no-repeat left top;
-@ACORDE-CONTACT-BACK: url("../images/contact-us-bg.gif") repeat 0 20px #26225d;
-
 
 html {
   position: relative;
@@ -452,38 +450,86 @@ body {
     margin-left: 0px;
     margin-right: 0px;
 }
-
 .visual#bg-contact-us {
     filter: gray;
     -webkit-filter: grayscale(50%);
-    background: @ACORDE-CONTACT-BACK;    
     margin-bottom: 20px;
 }
-
 .visual {
+    height: 30%;
     text-align: center;
     min-height: 150px;
     padding: 10px 0 20px 0;
     position: relative;
     z-index: 1;
-    background: #26225d;
+    background: #101010;
     -webkit-box-shadow: inset 0 -11px 15px -11px rgba(0, 0, 0, 0.5), inset 0 11px 15px -11px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 -11px 15px -11px rgba(0, 0, 0, 0.5), inset 0 11px 15px -11px rgba(0, 0, 0, 0.5);
 }
-
+.es.container {
+transform: translateY(50%);
+}
 .col-md-12 {
     color: white;
     position: relative;
     min-height: 1px;
     padding-left: 26px;
     padding-right: 26px;
+    text-transform: uppercase;
+}
+
+.col-md-12 > h1 {
+    font-size: 48px;
 }
 
 @media (min-width: 1025px) {
 .col-md-12 {
     width: 100%;
-}}
+}
+}
 
+.btn-primary {
+    color: #ffffff;
+    background-color: #414140;
+    border-color: #414140;
+}
+
+.btn-primary:hover {
+    color: #ffffff;
+    background-color: #C91123;
+    border-color: #C91123;
+}
+
+#form-contact {
+    width: 600px;
+    margin: 50px auto;
+}
+
+@media (max-width: 665px) {
+.col-md-12 > h1 {
+    font-size: 36px;
+}
+}
+
+@media (max-width: 600px) {
+#form-contact {    
+    width: 90%;
+}
+}
+
+@media (max-height: 850px) {
+#form-contact {  
+    margin: 20px auto;
+}
+.es.container {
+transform: translateY(20%);
+}
+}
+
+
+input#submit.btn.btn-primary {
+    width: 100%;
+}
 
 /*footer styles
 -------------------------------------------------- */
