@@ -1,4 +1,16 @@
 
+var showCaption = function() {
+    if ($('.carousel-caption > p').css('display') == 'none') {
+        $('.carousel-caption > p').css('display','block');              
+        $('.show-caption').removeClass('fa fa-plus');
+        $('.show-caption').addClass('fa fa-minus'); 
+    } else {
+        $('.carousel-caption > p').css('display','none');
+        $('.show-caption').removeClass('fa fa-minus');
+        $('.show-caption').addClass('fa fa-plus');
+    }
+}
+
 /** Función que hace scroll hacia un elemento con un id en particular */
 function goToByScroll(id){
     $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
@@ -23,7 +35,7 @@ function goToByScroll(id){
      navbarHeight = $(".navbar-default.navbar-fixed-top").innerHeight();
      $("#home").css('padding-top', navbarHeight);
      $("#enterprise").css('padding-top', navbarHeight);     
-     $("#contact").css('padding-top', navbarHeight);
+     $("#bg-contact-us").css('padding-top', navbarHeight);
      console.info('resizeAcordeMosaic');
      paintSvgOut();
  }
@@ -428,11 +440,15 @@ $(document).ready(function(){
         goToByScroll("enterprise");
     });
     $('#enterprise-next').on('click', function() {
-        goToByScroll("people");
+        //goToByScroll("people");
+        goToByScroll("contact");
     });
     $('#people-next').on('click', function() {
         goToByScroll("contact");
     });
+    //Manejo de mostrar/ocultar la informacion del carousel
+    $('.show-caption').on('click', showCaption);
+    $('.carousel-caption').on('click', showCaption);
     
     //
     $('a.menu-item').each( function (i, elem) {

@@ -46,6 +46,13 @@ module.exports = function(grunt) {
                     dest: 'build/js'
                 }]
             },
+            jqueryui: {
+                files: [{
+                    expand: true, flatten: true, filter: 'isFile',
+                    src: ['bower_components/jquery-ui/jquery-ui.min.js'],
+                    dest: 'build/js'
+                }]
+            },
             css: {
                 files: 
                 [

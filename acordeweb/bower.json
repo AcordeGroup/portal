@@ -16,6 +16,7 @@
   "license": "MIT",
   "homepage": "isven.com.ve",
   "dependencies": {
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "jquery-ui": "~1.11.4"
   }
 }
