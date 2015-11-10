@@ -446,10 +446,12 @@ $(document).ready(function(){
     $('#people-next').on('click', function() {
         goToByScroll("contact");
     });
-    //Manejo de mostrar/ocultar la informacion del carousel
-    $('.show-caption').on('click', showCaption);
+    //Manejo de mostrar/ocultar la informacion del carousel    
     $('.carousel-caption').on('click', showCaption);
-    
+    if ($('.carousel-caption > p').css('display') == 'block') {
+        $('.show-caption').removeClass('fa fa-plus');
+        $('.show-caption').addClass('fa fa-minus'); 
+    }
     //
     $('a.menu-item').each( function (i, elem) {
         $( this ).on('click', function () {

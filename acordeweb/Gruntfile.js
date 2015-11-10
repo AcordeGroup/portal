@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                     optimization: 2
                 },
                 files: {
-                    "src/css/acorde.css": "src/css/acorde.less" // destination file and source file
+                    "build/css/acorde.css": "src/css/acorde.less" // destination file and source file
                 }
             }
         },
@@ -56,7 +56,6 @@ module.exports = function(grunt) {
             css: {
                 files: 
                 [
-                    {'build/css/acorde.css': ['src/css/acorde.css']},
                     {'build/css/bootstrap.css': ['src/css/bootstrap.css']},
                     {'build/css/bootstrap-theme.css': ['src/css/bootstrap-theme.css']},                    
                 ]

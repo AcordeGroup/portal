@@ -216,7 +216,7 @@ body {
     .down-arrow-button-container {
         left:93%;
     }
-    .fa.fa-chevron-down, .show-caption {
+    .fa.fa-chevron-down {
         font-size: 24px !important;
     }
 }
@@ -282,21 +282,21 @@ body {
     text-transform: uppercase;
 }
 .show-caption {
-    display: none !important;
     float: left;
     position: absolute;
-    top: 5px;    
+    top: 5px;
+    left: 5px;
 }
 @media (max-height: 500px) {
-.show-caption {
-    display: block !important;
-}
-.carousel-caption > p {
-    display: none;
-} 
-.carousel-caption > h4 {
-    font-size: 16px;
-}}
+    .show-caption {
+        font-size: 12px !important;
+    }    
+    .carousel-caption > p {
+        display: none;
+    } 
+    .carousel-caption > h4 {
+        font-size: 16px;
+    }}
 @media (max-height: 500px) {
     .carousel-caption {
         padding-bottom: 0px !important;
@@ -376,10 +376,13 @@ body {
     .business-news > h2 {
         font-size: 30px;
     }
+    #business-info-links {
+        display: none;
+    }
     .business-news {
         font-size: 12px;
     }}
-    @media (max-height: 600px) {
+@media (max-height: 600px) {
     .div-logo {
         height: 180px;
         width: 180px;
@@ -389,7 +392,11 @@ body {
         margin-left: 0px;
         width: 100px;
         height: 100px;
-    }}
+    }
+    .business-news {
+        padding-left: 0px;
+    }
+}
 @media (max-width: 1000px) {
     .business-news, .business-logo {
         width: 50%;
@@ -462,10 +469,21 @@ body {
 }
 @media (min-width: 1024px) {
     .business-news > h2 {
+        font-size: 42px;
+    }
+    .business-news {
+        font-size: 18px;
+    }
+}
+@media (min-width: 1200px) {
+    .business-news > h2 {
         font-size: 60px;
     }
     .business-news {
         font-size: 20px;
+    }
+    #business-info-links {
+        display: block;
     }
 }
 @media (min-width: 1600px) {
@@ -498,7 +516,7 @@ body {
     background-size: cover;
 }
 .hero-background video {
-    width: 110%;
+    width: 115%;    
 }
 .vertical-centering {
     height: 100%;
@@ -534,6 +552,10 @@ body {
 @media (max-width: 1000px) {
 }
 @media (max-width: 800px) {
+    .hero-background video {
+        width: 142%;
+        transform: translateX(-15%);
+    }    
 }
 @media (max-width: 500px) {
     .text-principal h1 {
@@ -542,10 +564,6 @@ body {
     .text-principal p {
         font-size: 16px;
         padding: 10px;
-    }
-    .hero-background video {
-        width: 164%;
-        transform: translateX(-24%);
     }
     .hero-background {
         display: none;
@@ -641,6 +659,13 @@ body {
 @media (max-height: 800px) {
 }
 @media (max-height: 600px) {
+    .component-headline {
+        font-size: 36px;
+        line-height: 40px;
+        padding-bottom: 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
 }
 @media (max-width: 1000px) {
 }
@@ -816,7 +841,6 @@ body {
 .contact-contents {
     background-color: #FBFBFB;
 }
-
 .form-horizontal .form-group {
     margin-left: 0px;
     margin-right: 0px;
@@ -899,6 +923,9 @@ input#submit.btn.btn-primary {
     .col-md-12 {
         font-size: 12px;
     }}
+@media (max-height: 500px) {
+    
+}
 @media (max-width: 1000px) {
 }
 @media (max-width: 800px) {
@@ -1013,9 +1040,32 @@ wrapper {
           line-height: 20px;
           font-size: 15px; } }
 
-@media (max-width: 500px) {
-.footer {
-    padding: 10px 0;
-    font-size: 10px;
-}    
+@media (max-height: 500px) {
+    .footer {
+        right: 0px;
+        width: inherit;
+    }
+    .container {
+        width: inherit;
+    }
+    #form-contact {
+        margin: inherit;
+    }
 }
+@media (max-width: 500px) {
+    .footer {
+        padding: 10px 0;
+        font-size: 10px;
+    }
+     .footer {
+        bottom: 0px;
+        width: 100%;
+    }
+    .container {
+        width: inherit;
+    }
+    #form-contact {
+       margin: 10px auto;
+    }
+}
+
