@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1200"
+   height="400"
+   viewBox="0 0 1200 400"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="special01.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.51534363"
+     inkscape:cx="534.50839"
+     inkscape:cy="258.24605"
+     inkscape:document-units="px"
+     inkscape:current-layer="svg2"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="746"
+     inkscape:window-x="1672"
+     inkscape:window-y="550"
+     inkscape:window-maximized="1"
+     units="px"
+     showborder="true"
+     inkscape:showpageshadow="false"
+     borderlayer="true"
+     inkscape:snap-text-baseline="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#800080;fill-opacity:0.99431817;stroke:#b684b6;stroke-width:1.72706342;stroke-opacity:0"
+       id="rectSVG01"
+       width="1198.2729"
+       height="398.27295"
+       x="0.86353171"
+       y="0.86353815"
+       onmouseover=""
+       onclick=""
+       onmouseout="">
+      <desc
+         id="desc3340">Un rectangulo SVG con background color y un titulo centrado</desc>
+      <title
+         id="title3338">svg_titulo_centrado</title>
+    </rect>
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#c8c8c8;fill-opacity:0.74901961;stroke:#b684b6;stroke-opacity:0"
+       id="path4164"
+       sodipodi:sides="5"
+       sodipodi:cx="194.83923"
+       sodipodi:cy="185.2652"
+       sodipodi:r1="158.50365"
+       sodipodi:r2="128.23215"
+       sodipodi:arg1="1.3835872"
+       sodipodi:arg2="2.0119057"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 224.33954,340.99939 55.843312,261.44617 79.434725,76.613435 262.51125,41.933747 352.06735,205.33325 Z"
+       inkscape:transform-center-x="-11.618643"
+       inkscape:transform-center-y="8.023318"
+       transform="matrix(1.2745187,0,0,1.2937976,304.46419,-49.429277)" />
+  </g>
+</svg>
