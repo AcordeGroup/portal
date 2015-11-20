@@ -21,7 +21,7 @@
       
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="60" onresize="resizeAcordeMosaic()">
-   <!-- Fixed navbar -->
+    <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-header container">
         <div class="navbar-header">
@@ -56,6 +56,8 @@
         </ul>
     </div>
     </nav>
+      
+      
     <div id="home" class="home-contents">
         <!-- INICIO DE CAROUSEL-->
         <div id="myCarousel" class="carousel slide">
@@ -65,36 +67,56 @@
                 <li data-target="#myCarousel" data-slide-to="2" class=""></li>
             </ol>
             <div class="carousel-inner">
+                <!-- FACTORY INIT -->
                 <div class="item">
                     <section id="factory" class="carouselImg">
+                        <div class="factory-frame-group">
+                            <div class="factory-frame"><img src="images/factory/framework-01.png"/>
+                                <span>DESCUBRE</span>
+                            </div>
+                            <div class="factory-frame"><img src="images/factory/framework-02.png"/>
+                                <span>DISEÑA</span>
+                            </div>
+                            <div class="factory-frame"><img src="images/factory/framework-03.png"/>
+                                <span>CONSTRUYE</span>
+                            </div>
+                            <div class="factory-frame"><img src="images/factory/framework-04.png"/>
+                                <span>PRUEBA</span>
+                            </div>
+                            <div class="factory-frame"><img src="images/factory/framework-05.png"/>
+                                <span>DESPLIEGA</span>
+                            </div>
+                            <div class="factory-frame"><img src="images/factory/framework-06.png"/>
+                                <span>MIDE Y REFINA</span>
+                            </div>
+                        </div>                            
                     </section>
                     <div class="carousel-caption">                        
                         <h4>Somos una fábrica de software<i class="show-caption fa fa-plus"></i></h4>
                         <p>Contamos con una sólida experiencia en la gestión y construcción de aplicaciones confiables y efectivas que impulsan la innovación y mejoran la satisfacción de sus clientes, manteniendo la visibilidad en todos los proyectos empresariales</p>                        
                     </div>
                 </div>
-                <div class="item active">
-                    <section id="business" class="carouselImg">
+                <!-- FACTORY FIN -->                
+                <!-- BUSINESS IMAGE BACKGROUND INIT -->
+                <div class="item active">                                    
+                    <section id="business-image" class="carouselImg">                        
                         <div class="business-logo">
                             <div class="div-logo">
-                                <img id="logo" src="images/acorde-isotopo.png">
+                                <img class="logo" src="images/acorde-isotopo.png">
                                 <div id="business-info" class="al-home-content">
                                     <div class="content">
-                                        <section id="business-info-links">
-                                            <a class="button medium button-inline scrollto" href="#people"><i class="fa fa-eye"></i> Ver       Portfolio </a>                      
-                                            <a class="button medium button-inline scrollto" href="#contact"><i class="fa fa-envelope"></i> Contactanos </a> 
-                                        </section>
-                                        <p><span style="padding-top: 15px;">
-                                        <strong><span><i class="al-icon-fa fa fa-map-marker"></i></span> Acorde Group, Caracas<br>
+                                        <p><span class="business-logo-text">
+                                        <strong><span><i class="fa fa-users"></i></span> Acorde<br>
                                         </strong></span></p>
+                                        <a class="phone-info" href="#contact"><i class="fa fa-phone"></i> +58-212-4197250 </a>
                                     </div>
                                 </div>
                             </div>
 	                   </div>
                        <div class="business-news">
                             Noticias
-                            <h2 class="home-listing__title">Acorde provee servicios de desarrollo a <a href="http://www.wau.com/website/" 
-                                                                                                                               target="_blank">WAU MOVIL</a></h2>
+                            <h2 class="home-listing__title">Acorde provee servicios de desarrollo a 
+                                <a href="http://www.wau.com/website/" target="_blank">WAU MOVIL</a></h2>
                             <p>La consultora con casa matriz en Guatemala y clientes en toda America Latina confia en el talento y experiencia de Acorde para la ejecucion de 
                                 proyectos en forma deslocalizada.</p>              
                        </div>
@@ -109,6 +131,8 @@
                         lo cual les permite centrarse en la mejora continua de sus productos</p>                        
                     </div>
                 </div>
+                <!-- BUSINESS IMAGE BACKGROUND FIN -->                            
+                <!-- HERO INIT -->                
                 <div class="item">
                     <div class="hero-contents">
                         <div class="vertical-centering" data-responsive-height="">
@@ -133,6 +157,7 @@
                             mantiene en constante aprendizaje, eso nos motiva a dar lo mejor e impulsa la mejora continua de nuestros procesos</p>
                    </div>
                 </div>
+                <!-- HERO FIN -->
             </div>
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
             <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
@@ -151,7 +176,13 @@
 				    <h2 class="component-headline color-normal">Somos su empresa Aliada</h2>
 				    <div class="sub-header">EN SU EXITO SE ENCUENTRA EL NUESTRO</div>
                     <p>Cada proyecto necesita una administración eficaz y eficiente, en Acorde somos conscientes de esta realidad y estamos preparados para asumir dicha responsabilidad con éxito</p>
-                    <p>Nuestra visión es darle a sus productos una arquitectura basada en tecnologías vigentes, escalables y robustas usando las herramientas mas adecuadas para su proyecto</p>
+                    <p id="enterprise-vision">Nuestra visión es darle a sus productos una arquitectura basada en tecnologías vigentes, escalables y robustas usando las herramientas mas adecuadas para su proyecto</p>
+                </div>
+                <div>
+                    <a class="enterprise-link especific" href="documentos/carta_presentacion.pdf" target="_blank"><i class="fa fa-file-text"></i>&nbsp;Carta de Presentación</a>
+                </div>
+                <div>
+                    <a class="enterprise-link especific" href="documentos/propuesta_tecnica.pdf" target="_blank"><i class="fa fa-file-text"></i>&nbsp;Propuesta Técnica</a>
                 </div>
             </div>
 	   </section>
@@ -224,6 +255,7 @@
       <div class="container">
         <div class="wrapper">
 		<div class="social-links">
+            <span class="footer-phone"><i class="fa fa-phone"></i> +58-212-4197250</span>
 			<a class="social-item twitter" target="_blank" href="https://twitter.com/acorde"><i class="fa fa-twitter"></i></a>
 <!--            <a class="social-item facebook" target="_blank" href="https://www.facebook.com/acorde"><i class="fa fa-facebook"></i></a>-->
             <a class="social-item linked-in" target="_blank" href="https://www.linkedin.com/company/acorde"><i class="fa fa-linkedin"></i></a>

@@ -36,7 +36,8 @@ module.exports = function(grunt) {
             main: {
                 files: 
                 [
-                    {'build/index.html':'src/index.html'}
+                    {'build/index.html':'src/index.html'},
+                    {expand: true, flatten: true, src: ['src/documentos/**'], dest: 'build/documentos', filter: 'isFile'}
                 ]
             },
             jquery: {
