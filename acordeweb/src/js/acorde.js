@@ -414,6 +414,8 @@ $(document).ready(function(){
     }    
     console.info('acorde.js ready init');
     
+    $('.carousel').carousel('pause');
+    
     //suma funcionalidad del menu
     $('#toggle').on('click', function (event) {     
          event.stopPropagation();

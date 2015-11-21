@@ -318,7 +318,7 @@ body {
 .fa.fa-users {
     color: #989697;
 }
-.phone-info, .enterprise-link {
+.phone-info, .enterprise-link, input#submit.btn.btn-primary  {
     -webkit-transition: 0.6s ease-in-out;
     -moz-transition: 0.6s ease-in-out;
     -o-transition: 0.6s ease-in-out;
@@ -368,7 +368,7 @@ body {
     border-radius: 2px 16px 2px;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
 }
-a.phone-info:hover, a.enterprise-link:hover {
+a.phone-info:hover, a.enterprise-link:hover, input#submit.btn.btn-primary:hover {
     color: white;
     transform: rotateX(360deg);
 }
@@ -722,6 +722,13 @@ a.phone-info:visited, a.enterprise-link:visited {
 #factory {
     background-color: #f6f3ed;
 }
+#factory-header {
+    background-color: rgba(10, 10, 10, 0.72);
+    height: 26px;
+    width: 99px;
+    margin: 0 auto;
+    margin-top: -29px;
+}
 .carouselImg {
     padding-top: 40px;
     background-position: 50% 0px;
@@ -759,6 +766,10 @@ a.phone-info:visited, a.enterprise-link:visited {
     display: inline-block;   
 }
 @media (max-height: 800px) {
+    .factory-frame > img {
+        width: 254px;
+        height: 182px;
+    }
 }
 @media (max-height: 600px) {
 }
@@ -857,7 +868,8 @@ a.phone-info:visited, a.enterprise-link:visited {
     width: auto;
     min-width: 250px;
     padding-top: 4px;
-    height: 30px;    
+    height: 30px;  
+    border-radius: 3px 24px 3px;    
 }
 @media (max-height: 800px) {
 }
@@ -898,9 +910,29 @@ a.phone-info:visited, a.enterprise-link:visited {
         display: none;
     }
 }
-@media (min-width: 1600px) {
+@media (min-height: 900px) {
+    .component-headline {
+        font-size: 64px;
+        line-height: 64px;
+    }
+    .enterprise-inner .sub-header {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .enterprise-inner p {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .enterprise-link.especific {
+        font-size: 17px;
+        min-width: 305px;
+    }
 }
-
+@media (min-width: 1600px) {
+    .wrapper-small {
+        max-width: 800px;
+    }
+}
 /* people styles
 -------------------------------------------------- */
 .people-contents {
@@ -1107,10 +1139,12 @@ transform: translateY(20%);
 }
 
 .form-control, .btn {
-    border-radius: 0px !important;
+    border-radius: 0px;
 }
 input#submit.btn.btn-primary {
     width: 100%;
+    height: 36px;
+    border-radius: 4px 32px 4px;
 }
 @media (max-height: 800px) {
     #form-contact {  
