@@ -16,6 +16,20 @@ function goToByScroll(id){
     $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
 }
 
+/** Función que hace expand de la seccion leer más. LC */
+function expandReadMore(id, more){
+    if ($("."+id+" > p").css('display') == 'none') {
+         $("."+id+ " > p").css('display','block');  
+         $("."+more).text("Leer menos...");
+         $("."+more).addClass('customers-mail');
+    }else{
+         $("."+id+ " > p").css('display','none');  
+         $("."+more).text("Leer más...");
+         $("."+more).addClass('customers-mail');
+    }
+    
+}
+
  /** Funcion que permite rotar un elemento */
  var rotate = function(elem,value, origin) {
       elem.css('transform',value);
@@ -30,11 +44,17 @@ function goToByScroll(id){
  var resizeAcordeMosaic = function() {
      $("#home").css('height', window.innerHeight);
      $("#enterprise").css('height', window.innerHeight);
+     //se adiciona tamaño variable a las secciones customers y team - LC
+     $("#customers").css('height', window.innerHeight);
+     $("#team").css('height', window.innerHeight);
      $("#contact").css('height', window.innerHeight - $(".footer").outerHeight(true));
      //
      navbarHeight = $(".navbar-default.navbar-fixed-top").innerHeight();
      $("#home").css('padding-top', navbarHeight);
-     $("#enterprise").css('padding-top', navbarHeight);     
+     $("#enterprise").css('padding-top', navbarHeight);  
+      //se adiciona padding a las secciones customers y team - LC
+     $("#customers").css('padding-top', navbarHeight);  
+     $("#team").css('padding-top', navbarHeight);  
      $("#bg-contact-us").css('padding-top', navbarHeight);
      console.info('resizeAcordeMosaic');
      paintSvgOut();
@@ -408,6 +428,64 @@ var activeAreaGroup;
 //Una vez esta listo el documento se inicializan todos los componentes de la página
 $(document).ready(function(){
     
+    //inicializa los campos del carrousel para cada div team, LC
+    
+    //first div slide ************************************************//
+    var slideTeam1 = $('.slideTeam1');
+    var containerTeam1 = $('#slidesTeam1 ul');
+    var elm = containerTeam1.find(':first-child').prop("tagName");
+    var item_width = containerTeam1.width();
+    slideTeam1.width(item_width); //set the slides to the correct pixel width
+    containerTeam1.parent().width(item_width);
+    containerTeam1.width(slideTeam1.length * item_width); //set the slides container to the correct total width
+    containerTeam1.find(elm + ':first').before(containerTeam1.find(elm + ':last'));
+    resetSlides(containerTeam1,item_width);
+  
+    //if user clicked on next button
+    
+     $('.next').on('click', function() {
+        //slide the item
+        if (containerTeam1.is(':animated')) {
+            return false;
+        }
+        containerTeam1.stop().animate({
+                'left': item_width * -2
+            }, 700, function () {
+                containerTeam1.find(elm + ':last').after(containerTeam1.find(elm + ':first'));
+                resetSlides(containerTeam1,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+        
+    });
+    
+     //if user clicked on next button
+    $('.previous').on('click', function() {
+        //slide the item
+        if (containerTeam1.is(':animated')) {
+            return false;
+        }
+       containerTeam1.stop().animate({
+                'left': 0
+            }, 700, function () {
+                containerTeam1.find(elm + ':first').before(containerTeam1.find(elm + ':last'));
+                resetSlides(containerTeam1,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+        
+    });
+    // end first div slide ************************************************//
+    
+    function resetSlides(container, item_width) {
+        //and adjust the container so current is in the frame
+		//alert("resetSlides"+ item_width);
+        container.css({
+            'left': -1 * item_width
+        });
+    }
+    
+    
     //manejo adecuado de la consola
     if (console == undefined) {
         console = { info: function() {}, log: function() {} };
@@ -443,6 +521,15 @@ $(document).ready(function(){
     });
     $('#enterprise-next').on('click', function() {
         //goToByScroll("people");
+        goToByScroll("customers");
+    });
+    // se agrega navegacion para secciones customers y team - LC
+     $('#customers-next').on('click', function() {
+        //goToByScroll("people");
+        goToByScroll("team");
+    });
+    $('#team-next').on('click', function() {
+        //goToByScroll("people");
         goToByScroll("contact");
     });
     $('#people-next').on('click', function() {
@@ -454,6 +541,21 @@ $(document).ready(function(){
         $('.show-caption').removeClass('fa fa-plus');
         $('.show-caption').addClass('fa fa-minus'); 
     }
+    //
+    
+    //Manejo de mostrar/ocultar la informacion "LEER MAS" en la descripcion customers -  LC    
+   $('.more-wau').on('click', function() {
+     expandReadMore("complete-wau","more-wau");
+	});
+     $('.more-uniball').on('click', function() {
+     expandReadMore("complete-uniball","more-uniball");
+	});
+     $('.more-tecna').on('click', function() {
+     expandReadMore("complete-tecna","more-tecna");
+	});
+     $('.more-avantica').on('click', function() {
+     expandReadMore("complete-avantica","more-avantica");
+	});
     //
     $('a.menu-item').each( function (i, elem) {
         $( this ).on('click', function () {
