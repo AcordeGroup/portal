@@ -1,4 +1,73 @@
 
+var sendContactMail = function(e){
+    e.preventDefault();
+    
+    console.log("summit sendContactMail");
+    
+    //deshabilita summit y cambia el mensaje
+    $('#submit').prop('disabled', true);
+    $('#form-message').html("Espere un momento por favor...");
+    
+    //configura los datos a pasar a la aplicación de servidor
+    var data = { 
+      name: document.getElementById('name').value, 
+      email: document.getElementById('email').value,
+      message: document.getElementById('message').value,
+      answer: document.getElementById('human').value
+    }    
+    
+     console.log("data: " + data.name + "," + data.email + "," + data.message + "," + data.answer);
+    
+    if ( data.name.trim() == "") {
+        $('#form-message').html("Debe introducir su nombre :)");
+        $('#submit').prop('disabled', false);
+        return;
+    }
+    if ( data.email.trim() == "") {
+        $('#form-message').html("Debe introducir un correo :)");
+        $('#submit').prop('disabled', false);
+        return;
+    }
+    if ( data.answer.trim() == "") {
+        $('#form-message').html("Debe introducir la respuesta :)");
+        $('#submit').prop('disabled', false);
+        return;
+    }
+    if (data.answer != "5") {
+        $('#form-message').html("3 + 2 = " + data.answer + "?... Por favor verifique su respuesta y vuelva a intentarlo");
+        $('#submit').prop('disabled', false);
+        return;
+    }    
+    
+    // Run our Parse Cloud Code and 
+    // pass our 'data' object to it
+    Parse.Cloud.run("sendEmail", data, {
+      success: function(object) {
+        cleanContactForm();
+        $('#form-message').html("Sr(a) " + data.name + ' su mensaje ha sido guardado. Muchas gracias por contactarnos!').addClass('success').fadeIn('fast');
+        $('#submit').prop('disabled', false);  
+      },
+      error: function(object, error) {
+        console.log(object);
+        if (error != undefined) {
+            console.log("error: " + error);
+            $('#form-message').html(error).addClass('error').fadeIn('fast');
+        } else {
+            $('#form-message').html('Uh oh, lo sentimos, ha ocurrido un error al momento de guardar su mensaje. Por favor, reportar la falla a soporte@acorde.com.ve').addClass('error').fadeIn('fast');
+        }
+        $('#submit').prop('disabled', false);
+      }
+    });    
+};
+
+var cleanContactForm = function() {
+    $('#name').val('');
+    $('#email').val('');
+    $('#message').val('');
+    $('#human').val('');
+    $('#form-message').html("");
+};
+
 var showCaption = function() {
     if ($('.carousel-caption > p').css('display') == 'none') {
         $('.carousel-caption > p').css('display','block');              
@@ -492,7 +561,13 @@ $(document).ready(function(){
     }    
     console.info('acorde.js ready init');
     
+    //PAUSA EL CAROUSEL - QUITAR EN PRODUCCION    
     $('.carousel').carousel('pause');
+    
+    //Configura el action del form
+    // Initialize Parse with your Parse application & javascript keys
+    Parse.initialize("BHWlVUatQvb4hSdbToG0vzYb80RgQ8zQe6bDgVya", "KDktdtwVC5jJdzVPOT35HwPQTpahiJZRe3q6Bizv");
+    $('#form-contact').submit(sendContactMail);
     
     //suma funcionalidad del menu
     $('#toggle').on('click', function (event) {     
