@@ -281,6 +281,8 @@ body {
     border-top-color: #989697;
     border-top-width: 2px;
     border-top-style: ridge;
+    text-align: center;
+    vertical-align: middle;
 }
 .carousel-caption > h4 {
     text-transform: uppercase;
@@ -448,6 +450,11 @@ a.phone-info:visited, a.enterprise-link:visited {
 }
 .business-news > h2 {
     font-size: 50px;
+    margin-right:  30px;
+}
+
+.business-news > p {
+    margin-right:  30px;
 }
 #book_text {
     position: absolute;
@@ -955,6 +962,7 @@ a.phone-info:visited, a.enterprise-link:visited {
     text-decoration: underline;    
 }
 
+
 .customers-inner {
     padding-top: 20px;
     opacity: 1;
@@ -1186,33 +1194,12 @@ a.phone-info:visited, a.enterprise-link:visited {
     font-weight: 700;
 }
 
-.next-team-description {
-    margin-right: 10px;
-    position: absolute;
-    top: 85%;
-    margin-left: 10px;
-    width: 30px;
-    height: 30px;
-    margin-top: -20px;
-    font-size: 30px;
-    font-weight: 100;
-    line-height: 15px;
-    color: #ffffff;
-    text-align: center;
-    background: #222222;
-    border: 2px solid #ffffff;
-    -webkit-border-radius: 23px;
-    -moz-border-radius: 23px;
-    border-radius: 23px;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-}
 
 
 /*Estilos Base*/
 .team-frame {
-width: 230px;
-height: 180px;
+width: 280px;
+height: 230px;
 overflow: hidden;
 position: relative;
 text-align: center;
@@ -1243,7 +1230,7 @@ text-transform: uppercase;
 color: #fff;
 text-align: center;
 position: relative;
-    vertical-align: top;
+vertical-align: top;
 font-size: 17px;
 background: rgba(0, 0, 0, 0.9);
 }
@@ -1258,7 +1245,7 @@ line-height: normal;
 
 .team-frame .next {
 float:right; 
-margin-top: 5%;
+margin-top: 3%;
 margin-right: 15px;
 text-decoration: none;
 background: #222;
@@ -1274,9 +1261,9 @@ height: 30px;
 border-radius: 23px;
 }
 
-.team-frame .previous {
+.team-frame .prev {
 float:left; 
-margin-top: 5%;
+margin-top: 3%;
 margin-left: 15px; 
 text-decoration: none;
 background: #222;
@@ -1292,15 +1279,54 @@ height: 30px;
 border-radius: 23px;
 }
 
+.team-frame .next p {
+font-size: 35px; bottom: 15px;
+}
+
+.team-frame .prev p {
+font-size: 35px; bottom: 15px;
+}
+
+
 .team-group {
     margin: 0 auto;
     display: inline-block;
     text-align: center;
 }
+
+// slides team
+
+
+.slides {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+.slides ul {
+  list-style: none;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.slides ul li {
+  width: 100%;
+  height:50%;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+
+
+
 .team-frame .next:hover {
 box-shadow: 0 0 5px #000
 }
-.team-frame .previous:hover {
+.team-frame .prev:hover {
 box-shadow: 0 0 5px #000
 }
 
@@ -1318,7 +1344,7 @@ transform: translateX(-200px);/*Desplazamos a la izquierda*/
 opacity: 0;
 transition: all 0.6s ease-in-out;
 }
-.team p {
+.team .div {
 transform: translateX(200px);/*Desplazamos a la derecha*/
 opacity: 0;
 transition: all 0.3s linear;
@@ -1328,7 +1354,7 @@ opacity: 0;
 transition: all 0.3s ease-in-out;
 transform: translateY(100px)/*Desplazamos para abajo*/
 }
-.team .previous{
+.team .prev{
 opacity: 0;
 transition: all 0.3s ease-in-out;
 transform: translateY(100px)/*Desplazamos para abajo*/
@@ -1341,19 +1367,17 @@ opacity: 1;
 }
 .team:hover h2,
 .team:hover p,
-.team:hover .previous,
-.team:hover .next {
+.team:hover .prev,
+.team:hover .next{
 opacity: 1;
 transform: translateX(0px);/*Regresamos a las posiciones originales*/
 }
-.ejemplo-1:hover p {
-transition-delay: 0.1s;
-}
-.team:hover a.previous {
+
+.team:hover div.prev {
 transition-delay: 0.2s; /*Aplicamos un pequeño retardo para que se muestre al final*/
 transform: translateY(0px);
 }
-.team:hover a.next {
+.team:hover div.next {
 transition-delay: 0.2s; /*Aplicamos un pequeño retardo para que se muestre al final*/
 transform: translateY(0px);
 }
@@ -1388,29 +1412,43 @@ transform: translateY(0px);
 
    .team-frame {
         width: 200px;
-        height: 150%;
+        height: 150px;
     }
 
 .team-frame h2 {
 font-size: 13px;
+margin-top: 0 auto;
+bottom: 5%;
 
+}
+.team-frame .slides {
+ bottom: 15%;
 }
 .team-frame p {
 font-size: 8px;
-    margin: 3px 3px 2px 3px;
+margin: 2px 2px 0px 2px;
 }
-/*.team-frame .previous {
-
-font-size: 30px;
+    
+.team-frame .next {
+margin-top: 0;
 width: 20px;
 height: 20px;
 }
-    .team-frame .next {
 
-font-size: 30px;
+.team-frame .prev {
+margin-top: 0;
 width: 20px;
 height: 20px;
-}*/
+}
+.team-frame .next p {
+font-size: 25px; bottom: 14px;
+}
+
+.team-frame .prev p {
+font-size: 25px; bottom: 14px;
+}
+
+
 
 }
 
@@ -1434,25 +1472,33 @@ height: 20px;
 
 .team-frame h2 {
 font-size: 13px;
+bottom: 5%;
 }
-.team-frame p {
+.team-frame .slides {
+    bottom: 15%;
+}
+.team-frame  p {
 font-size: 10px;
-    margin: 3px 3px 2px 3px;
+margin: 2px 2px 0px 2px;
 }
-/*
-.team-frame .previous {
-
-font-size: 30px;
+.team-frame .next {
+margin-top: 0;
 width: 20px;
 height: 20px;
 }
-    .team-frame .next {
 
-font-size: 30px;
+.team-frame .prev {
+margin-top: 0;
 width: 20px;
 height: 20px;
 }
-*/
+.team-frame .next p {
+font-size: 25px; bottom: 14px;
+}
+
+.team-frame .prev p {
+font-size: 25px; bottom: 14px;
+}
 
 }
 @media (max-height: 600px) {
@@ -1475,51 +1521,8 @@ font-size: 13px;
 .team-frame p {
 font-size: 10px;
 }
-/*.team-frame .previous {
 
-font-size: 30px;
-width: 20px;
-height: 20px;
 }
-    .team-frame .next {
-
-font-size: 30px;
-width: 20px;
-height: 20px;
-}*/
-}
-
-// slides team
-
-
-#slidesTeam1 {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 80px;
-}
-
-#slidesTeam1 ul {
-  list-style: none;
-  width: 100%;
-  height: 80px;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-#slidesTeam1 ul li {
-  width: 100%;
-  height: 80px;
-  float: left;
-  text-align: center;
-  position: relative;
-  font-family: lato, sans-serif;
-}
-
-
-//]]]]]]]]]
-
 
 
 /* people styles
@@ -1904,5 +1907,11 @@ wrapper {
     #form-contact {
        margin: 10px auto;
     }
+}
+
+#lenguage{
+    margin: 0px 3px 3px 3px;
+    height: 20px;
+    width: 25px;
 }
 

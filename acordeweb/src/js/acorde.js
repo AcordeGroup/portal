@@ -87,14 +87,36 @@ function goToByScroll(id){
 
 /** Función que hace expand de la seccion leer más. LC */
 function expandReadMore(id, more){
+    var spanish = $("#lenguage").attr('src').indexOf("english")!=-1;
     if ($("."+id+" > p").css('display') == 'none') {
-         $("."+id+ " > p").css('display','block');  
-         $("."+more).text("Leer menos...");
+         $("."+id+ " > p").css('display','block');
          $("."+more).addClass('customers-mail');
+        if(spanish){
+         $("."+more).text("Leer menos...");   
+        }else{
+         $("."+more).text("Read less...");    
+        }
     }else{
          $("."+id+ " > p").css('display','none');  
-         $("."+more).text("Leer más...");
          $("."+more).addClass('customers-mail');
+            if(spanish){
+             $("."+more).text("Leer más...");   
+            }else{
+             $("."+more).text("Read more...");    
+            }
+         
+    }
+    
+}
+
+// cambia la imagen del leguaje.. LC 
+function cambiarImagLenguage(){
+    var lenguage =  $("#lenguage").attr('src');
+    lenguage = lenguage.indexOf("english");
+    if(lenguage != -1){
+        $("#lenguage").attr('src','images/lenguage/spanish.png');
+    }else{
+        $("#lenguage").attr('src','images/lenguage/english.png');
     }
     
 }
@@ -498,30 +520,30 @@ var activeAreaGroup;
 $(document).ready(function(){
     
     //inicializa los campos del carrousel para cada div team, LC
-    
+   
     //first div slide ************************************************//
-    var slideTeam1 = $('.slideTeam1');
-    var containerTeam1 = $('#slidesTeam1 ul');
-    var elm = containerTeam1.find(':first-child').prop("tagName");
-    var item_width = containerTeam1.width();
-    slideTeam1.width(item_width); //set the slides to the correct pixel width
-    containerTeam1.parent().width(item_width);
-    containerTeam1.width(slideTeam1.length * item_width); //set the slides container to the correct total width
-    containerTeam1.find(elm + ':first').before(containerTeam1.find(elm + ':last'));
-    resetSlides(containerTeam1,item_width);
+    var slide1 = $('.slide1');
+    var container1 = $('#slides1 ul');
+    var elm = container1.find(':first-child').prop("tagName");
+    var item_width = container1.width();
+    slide1.width(item_width); //set the slides to the correct pixel width
+    container1.parent().width(item_width);
+    container1.width(slide1.length * item_width); //set the slides container to the correct total width
+    container1.find(elm + ':first').before(container1.find(elm + ':last'));
+    resetSlides(container1,item_width);
   
     //if user clicked on next button
     
-     $('.next').on('click', function() {
+     $('#next1').on('click', function() {
         //slide the item
-        if (containerTeam1.is(':animated')) {
+        if (container1.is(':animated')) {
             return false;
         }
-        containerTeam1.stop().animate({
+        container1.stop().animate({
                 'left': item_width * -2
             }, 700, function () {
-                containerTeam1.find(elm + ':last').after(containerTeam1.find(elm + ':first'));
-                resetSlides(containerTeam1,item_width);
+                container1.find(elm + ':last').after(container1.find(elm + ':first'));
+                resetSlides(container1,item_width);
             });
         //cancel the link behavior            
         return false;
@@ -529,22 +551,426 @@ $(document).ready(function(){
     });
     
      //if user clicked on next button
-    $('.previous').on('click', function() {
+    $('#prev1').on('click', function() {
         //slide the item
-        if (containerTeam1.is(':animated')) {
+        if (container1.is(':animated')) {
             return false;
         }
-       containerTeam1.stop().animate({
+       container1.stop().animate({
                 'left': 0
             }, 700, function () {
-                containerTeam1.find(elm + ':first').before(containerTeam1.find(elm + ':last'));
-                resetSlides(containerTeam1,item_width);
+                container1.find(elm + ':first').before(container1.find(elm + ':last'));
+                resetSlides(container1,item_width);
             });
         //cancel the link behavior            
         return false;
         
     });
     // end first div slide ************************************************//
+    
+    //second div slide ************************************************//
+    var slide2 = $('.slide2');
+    var container2 = $('#slides2 ul');
+    var elm = container2.find(':first-child').prop("tagName");
+    var item_width = container2.width();
+    slide2.width(item_width); //set the slides to the correct pixel width
+    container2.parent().width(item_width);
+    container2.width(slide2.length * item_width); //set the slides container to the correct total width
+    container2.find(elm + ':first').before(container2.find(elm + ':last'));
+    resetSlides(container2,item_width);
+  
+    //if user clicked on next button
+     $('#next2').on('click', function() {
+        //slide the item
+        if (container2.is(':animated')) {
+            return false;
+        }
+        container2.stop().animate({
+                'left': item_width * -2
+            }, 700, function () {
+                container2.find(elm + ':last').after(container2.find(elm + ':first'));
+                resetSlides(container2,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+        
+    });
+    
+     //if user clicked on next button
+    $('#prev2').on('click', function() {
+        //slide the item
+        if (container2.is(':animated')) {
+            return false;
+        }
+       container2.stop().animate({
+                'left': 0
+            }, 700, function () {
+                container2.find(elm + ':first').before(container2.find(elm + ':last'));
+                resetSlides(container2,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+    });
+    // end second div slide ************************************************//
+    //third div slide ************************************************//
+    var slide3 = $('.slide3');
+    var container3 = $('#slides3 ul');
+    var elm = container3.find(':first-child').prop("tagName");
+    var item_width = container3.width();
+    slide3.width(item_width); //set the slides to the correct pixel width
+    container3.parent().width(item_width);
+    container3.width(slide3.length * item_width); //set the slides container to the correct total width
+    container3.find(elm + ':first').before(container3.find(elm + ':last'));
+    resetSlides(container3,item_width);
+  
+    //if user clicked on next button
+     $('#next3').on('click', function() {
+        //slide the item
+        if (container3.is(':animated')) {
+            return false;
+        }
+        container3.stop().animate({
+                'left': item_width * -2
+            }, 700, function () {
+                container3.find(elm + ':last').after(container3.find(elm + ':first'));
+                resetSlides(container3,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+        
+    });
+    
+     //if user clicked on next button
+    $('#prev3').on('click', function() {
+        //slide the item
+        if (container3.is(':animated')) {
+            return false;
+        }
+       container3.stop().animate({
+                'left': 0
+            }, 700, function () {
+                container3.find(elm + ':first').before(container3.find(elm + ':last'));
+                resetSlides(container3,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+    });
+    // end third div slide ************************************************//
+    
+      //fourth div slide ************************************************//
+    var slide4 = $('.slide4');
+    var container4 = $('#slides4 ul');
+    var elm = container4.find(':first-child').prop("tagName");
+    var item_width = container4.width();
+    slide4.width(item_width); //set the slides to the correct pixel width
+    container4.parent().width(item_width);
+    container4.width(slide4.length * item_width); //set the slides container to the correct total width
+    container4.find(elm + ':first').before(container4.find(elm + ':last'));
+    resetSlides(container4,item_width);
+  
+    //if user clicked on next button
+     $('#next4').on('click', function() {
+        //slide the item
+        if (container4.is(':animated')) {
+            return false;
+        }
+        container4.stop().animate({
+                'left': item_width * -2
+            }, 700, function () {
+                container4.find(elm + ':last').after(container4.find(elm + ':first'));
+                resetSlides(container4,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+        
+    });
+    
+     //if user clicked on next button
+    $('#prev4').on('click', function() {
+        //slide the item
+        if (container4.is(':animated')) {
+            return false;
+        }
+       container4.stop().animate({
+                'left': 0
+            }, 700, function () {
+                container4.find(elm + ':first').before(container4.find(elm + ':last'));
+                resetSlides(container4,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+    });
+    // end fourth div slide ************************************************//
+    
+    //fifth div slide ************************************************//
+    var slide5 = $('.slide5');
+    var container5 = $('#slides5 ul');
+    var elm = container5.find(':first-child').prop("tagName");
+    var item_width = container5.width();
+    slide5.width(item_width); //set the slides to the correct pixel width
+    container5.parent().width(item_width);
+    container5.width(slide5.length * item_width); //set the slides container to the correct total width
+    container5.find(elm + ':first').before(container5.find(elm + ':last'));
+    resetSlides(container5,item_width);
+  
+    //if user clicked on next button
+     $('#next5').on('click', function() {
+        //slide the item
+        if (container5.is(':animated')) {
+            return false;
+        }
+        container5.stop().animate({
+                'left': item_width * -2
+            }, 700, function () {
+                container5.find(elm + ':last').after(container5.find(elm + ':first'));
+                resetSlides(container5,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+        
+    });
+    
+     //if user clicked on next button
+    $('#prev5').on('click', function() {
+        //slide the item
+        if (container5.is(':animated')) {
+            return false;
+        }
+       container5.stop().animate({
+                'left': 0
+            }, 700, function () {
+                container5.find(elm + ':first').before(container5.find(elm + ':last'));
+                resetSlides(container5,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+    });
+    // end fifth div slide ************************************************//
+  
+   //sixth div slide ************************************************//
+    var slide6 = $('.slide6');
+    var container6 = $('#slides6 ul');
+    var elm = container6.find(':first-child').prop("tagName");
+    var item_width = container6.width();
+    slide6.width(item_width); //set the slides to the correct pixel width
+    container6.parent().width(item_width);
+    container6.width(slide5.length * item_width); //set the slides container to the correct total width
+    container6.find(elm + ':first').before(container6.find(elm + ':last'));
+    resetSlides(container6,item_width);
+  
+    //if user clicked on next button
+     $('#next6').on('click', function() {
+        //slide the item
+        if (container6.is(':animated')) {
+            return false;
+        }
+        container6.stop().animate({
+                'left': item_width * -2
+            }, 700, function () {
+                container6.find(elm + ':last').after(container6.find(elm + ':first'));
+                resetSlides(container6,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+        
+    });
+    
+     //if user clicked on next button
+    $('#prev6').on('click', function() {
+        //slide the item
+        if (container6.is(':animated')) {
+            return false;
+        }
+       container6.stop().animate({
+                'left': 0
+            }, 700, function () {
+                container6.find(elm + ':first').before(container6.find(elm + ':last'));
+                resetSlides(container6,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+    });
+    // end sixth div slide ************************************************//
+    
+    //seventh div slide ************************************************//
+    var slide7 = $('.slide7');
+    var container7 = $('#slides7 ul');
+    var elm = container7.find(':first-child').prop("tagName");
+    var item_width = container7.width();
+    slide7.width(item_width); //set the slides to the correct pixel width
+    container7.parent().width(item_width);
+    container7.width(slide7.length * item_width); //set the slides container to the correct total width
+    container7.find(elm + ':first').before(container7.find(elm + ':last'));
+    resetSlides(container7,item_width);
+  
+    //if user clicked on next button
+     $('#next7').on('click', function() {
+        //slide the item
+        if (container7.is(':animated')) {
+            return false;
+        }
+        container7.stop().animate({
+                'left': item_width * -2
+            }, 700, function () {
+                container7.find(elm + ':last').after(container7.find(elm + ':first'));
+                resetSlides(container7,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+        
+    });
+    
+     //if user clicked on next button
+    $('#prev7').on('click', function() {
+        //slide the item
+        if (container7.is(':animated')) {
+            return false;
+        }
+       container7.stop().animate({
+                'left': 0
+            }, 700, function () {
+                container7.find(elm + ':first').before(container7.find(elm + ':last'));
+                resetSlides(container7,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+    });
+    // end seventh div slide ************************************************//
+    
+    //eighth div slide ************************************************//
+    var slide8 = $('.slide8');
+    var container8 = $('#slides8 ul');
+    var elm = container8.find(':first-child').prop("tagName");
+    var item_width = container8.width();
+    slide8.width(item_width); //set the slides to the correct pixel width
+    container8.parent().width(item_width);
+    container8.width(slide8.length * item_width); //set the slides container to the correct total width
+    container8.find(elm + ':first').before(container8.find(elm + ':last'));
+    resetSlides(container8,item_width);
+  
+    //if user clicked on next button
+     $('#next8').on('click', function() {
+        //slide the item
+        if (container8.is(':animated')) {
+            return false;
+        }
+        container8.stop().animate({
+                'left': item_width * -2
+            }, 700, function () {
+                container8.find(elm + ':last').after(container8.find(elm + ':first'));
+                resetSlides(container8,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+        
+    });
+    
+     //if user clicked on next button
+    $('#prev8').on('click', function() {
+        //slide the item
+        if (container8.is(':animated')) {
+            return false;
+        }
+       container8.stop().animate({
+                'left': 0
+            }, 700, function () {
+                container8.find(elm + ':first').before(container8.find(elm + ':last'));
+                resetSlides(container8,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+    });
+    // end seventh div slide ************************************************//
+    
+    //ninth div slide ************************************************//
+    var slide9 = $('.slide9');
+    var container9 = $('#slides9 ul');
+    var elm = container9.find(':first-child').prop("tagName");
+    var item_width = container9.width();
+    slide9.width(item_width); //set the slides to the correct pixel width
+    container9.parent().width(item_width);
+    container9.width(slide9.length * item_width); //set the slides container to the correct total width
+    container9.find(elm + ':first').before(container9.find(elm + ':last'));
+    resetSlides(container9,item_width);
+  
+    //if user clicked on next button
+     $('#next9').on('click', function() {
+        //slide the item
+        if (container9.is(':animated')) {
+            return false;
+        }
+        container9.stop().animate({
+                'left': item_width * -2
+            }, 700, function () {
+                container9.find(elm + ':last').after(container9.find(elm + ':first'));
+                resetSlides(container9,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+        
+    });
+    
+     //if user clicked on next button
+    $('#prev9').on('click', function() {
+        //slide the item
+        if (container9.is(':animated')) {
+            return false;
+        }
+       container9.stop().animate({
+                'left': 0
+            }, 700, function () {
+                container9.find(elm + ':first').before(container9.find(elm + ':last'));
+                resetSlides(container9,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+    });
+    // end seventh div slide ************************************************//
+    
+    //tenth div slide ************************************************//
+    var slide10 = $('.slide10');
+    var container10 = $('#slides10 ul');
+    var elm = container10.find(':first-child').prop("tagName");
+    var item_width = container10.width();
+    slide10.width(item_width); //set the slides to the correct pixel width
+    container10.parent().width(item_width);
+    container10.width(slide10.length * item_width); //set the slides container to the correct total width
+    container10.find(elm + ':first').before(container10.find(elm + ':last'));
+    resetSlides(container10,item_width);
+  
+    //if user clicked on next button
+     $('#next10').on('click', function() {
+        //slide the item
+        if (container10.is(':animated')) {
+            return false;
+        }
+        container10.stop().animate({
+                'left': item_width * -2
+            }, 700, function () {
+                container10.find(elm + ':last').after(container10.find(elm + ':first'));
+                resetSlides(container10,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+        
+    });
+    
+     //if user clicked on next button
+    $('#prev10').on('click', function() {
+        //slide the item
+        if (container10.is(':animated')) {
+            return false;
+        }
+       container10.stop().animate({
+                'left': 0
+            }, 700, function () {
+                container10.find(elm + ':first').before(container10.find(elm + ':last'));
+                resetSlides(container10,item_width);
+            });
+        //cancel the link behavior            
+        return false;
+    });
+    // end seventh div slide ************************************************//
     
     function resetSlides(container, item_width) {
         //and adjust the container so current is in the frame
